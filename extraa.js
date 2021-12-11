@@ -66,3 +66,14 @@
         };
       };
       deleteLastChar();
+
+      // 46) Change the background color of a <td> if the user clicks on it
+      const changeTdBg = function () {
+        const tds = document.querySelectorAll("td");
+        tds.forEach((td) => {
+          td.onclick = function (e) {
+            e.target.classList.toggle("bg-red");
+          };
+        });
+      };
+      changeTdBg();
