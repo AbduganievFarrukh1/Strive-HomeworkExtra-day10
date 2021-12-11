@@ -10,3 +10,18 @@
         }
       };
       alertUrl();
+
+    // 42) Create a button that will hide every image on the page when clicked
+   const hideImages = function () {
+           const btn = document.createElement("button");
+                btn.innerText = "Hide images";
+                btn.onclick = function () {
+                  const imgs = document.querySelectorAll("img");
+                  imgs.forEach((img) => {
+                    img.classList.add("d-none");
+                  });
+                };
+                const body = document.querySelector("body");
+                body.appendChild(btn);
+              };
+              hideImages();
