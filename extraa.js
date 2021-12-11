@@ -131,3 +131,9 @@
         }
       };
       createTable();
+      // 50) Write a function to remove the last table from the page
+      const removeTable = function () {
+        const table = document.querySelectorAll("table")[1];
+        table.remove();
+      };
+      removeTable();
