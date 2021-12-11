@@ -57,3 +57,12 @@
         console.log(sum);
       };
       sumNumbers();
+
+      // 45) Delete the last letter from the heading each time the user clicks on it
+      const deleteLastChar = function () {
+        const h1 = document.querySelector("h1");
+        h1.onclick = function (e) {
+          h1.innerText = h1.innerText.substring(0, h1.innerText.length - 1);
+        };
+      };
+      deleteLastChar();
