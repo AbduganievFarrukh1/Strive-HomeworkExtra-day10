@@ -41,3 +41,19 @@
         body.appendChild(btn);
       };
       toggleTable();              
+
+
+      // 44) Write a function for calculating the sum of every number inside all the table cells (if their content is numeric)
+      const sumNumbers = function () {
+        const tds = document.querySelectorAll("td");
+        let sum = 0;
+        tds.forEach((td) => {
+          const toNumber = parseInt(td.innerText);
+          const isNotNumeric = isNaN(toNumber);
+          if (!isNotNumeric) {
+            sum += toNumber;
+          }
+        });
+        console.log(sum);
+      };
+      sumNumbers();
