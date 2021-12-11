@@ -77,3 +77,18 @@
         });
       };
       changeTdBg();
+
+
+      // 47) Add a delete button at the bottom of the table, when clicked it should delete a random <td>
+      const deleteRandom = function () {
+        const btn = document.createElement("button");
+        btn.innerText = "Delete random";
+        btn.onclick = function () {
+          const tds = document.querySelectorAll("td");
+          const random = Math.floor(Math.random() * tds.length);
+          tds[random].remove();
+        };
+        const body = document.querySelector("body");
+        body.appendChild(btn);
+      };
+      deleteRandom();
